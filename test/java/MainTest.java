@@ -3,14 +3,16 @@ import org.mockito.Mockito;
 
 import java.util.Scanner;
 
+import static org.mockito.Mockito.when;
 
-class MainTest {
-
-
+public class MainTest {
 
     @Test
-    void main() {
+    public void main() {
         Scanner mockScanner = Mockito.mock(Scanner.class);
-        //when(mockScanner.nextLine()).
+        when(mockScanner.nextLine()).thenReturn("1");
+        when(mockScanner.nextLine()).thenReturn("A");
+
+
     }
 }
